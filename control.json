@@ -1,0 +1,12 @@
+{
+    "name": "webapps-dompdf-lib",
+    "version" : "0.1.0",
+    "classes" : [ "dompdf" ],
+    "deps" : [
+        "webapps-framework-lib"
+    ]
+    ,
+    "source" :  {
+        "webapps-framework-lib"    : "https://github.com/cutewebapps/webapps-framework-lib.git"
+    }
+}
