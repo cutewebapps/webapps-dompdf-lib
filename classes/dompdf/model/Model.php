@@ -8,6 +8,8 @@ abstract class dompdf_Model{
     
     public function __construct(  ) {        
         
+        BlSystem_Auth::getInstance()->keepAlive();
+        
         $this->_dompdf = new DOMPDF();
     }
     

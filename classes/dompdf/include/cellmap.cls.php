@@ -433,9 +433,16 @@ class Cellmap {
     
     $node = $frame->get_node();
     
+    /**
+     * @TODO define how text node gets here, text node do not have method getAttribute
+     */
+    if ( !method_exists($node, "getAttribute" ) ){
+        return;
+    }
+    
     // Determine where this cell is going
     //Sys_Debug::dump( $node->attributes );die;
-    try {
+    try {        
         $colspan = $node->getAttribute("colspan");
     } catch (Exception $exc) {
         Sys_Debug::dump( $node );die;
